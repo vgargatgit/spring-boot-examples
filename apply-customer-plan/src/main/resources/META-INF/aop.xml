@@ -1,0 +1,17 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "https://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+
+    <weaver options="-verbose -showWeaveInfo">
+        <!-- only weave classes in our application-specific packages -->
+        <!--<include within="com.open.featurecheck.*"/>
+        <include within="com.open.orderservice.*"/>-->
+        <include within="com.open.orderservice.service.*"/>
+
+    </weaver>
+
+    <aspects>
+        <!-- weave in just this aspect -->
+        <aspect name="com.open.featurechecklib.aspect.FeatureCheckAspect"/>
+    </aspects>
+
+</aspectj>
